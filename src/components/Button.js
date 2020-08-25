@@ -46,7 +46,6 @@ const useStyles = makeStyles(() => ({
     },
   },
   blueOutline: {
-    background: "#FFFFFF",
     color: "#13C6FF",
     borderColor: "#13C6FF",
     "&:hover": {
@@ -55,7 +54,6 @@ const useStyles = makeStyles(() => ({
     },
   },
   twilightOutline: {
-    background: "#FFFFFF",
     color: "#091133",
     borderColor: "#091133",
     "&:hover": {
@@ -64,13 +62,15 @@ const useStyles = makeStyles(() => ({
     },
   },
   flurpleOutline: {
-    background: "#FFFFFF",
     color: "#4C56A5",
     borderColor: "#4C56A5",
     "&:hover": {
       background: "#4C56A5",
       color: "#FFFFFF",
     },
+  },
+  outline: {
+    background: "rgba(0. 0. 0. 0)",
   },
   shadow: {
     boxShadow: "1px 1px 4px rgba(0, 0, 0, 0.25)",
@@ -111,13 +111,13 @@ const Button = (props) => {
         size === "xl" && classes.sizeXLarge,
         dropShadow && classes.shadow,
         (color === "blue" && type === "filled" && classes.blueFilled) ||
-          (type === "outline" && classes.blueOutline),
+          (type === "outline" && [classes.blueOutline, classes.outline]),
         color === "twilight" &&
           ((type === "filled" && classes.twilightFilled) ||
-            (type === "outline" && classes.twilightOutline)),
+            (type === "outline" && [classes.twilightOutline, classes.outline])),
         color === "flurple" &&
           ((type === "filled" && classes.flurpleFilled) ||
-            (type === "outline" && classes.flurpleOutline))
+            (type === "outline" && [classes.flurpleOutline, classes.outline]))
       )}
     >
       {props.children}
