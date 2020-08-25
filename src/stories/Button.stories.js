@@ -1,23 +1,44 @@
 import React from "react";
-import FlureeButton from "../components/FlureeButton";
+import Button from "../components/Button";
 
 export default {
   title: "Example/FlureeButton",
-  component: FlureeButton,
+  component: Button,
 };
 
-const Template = (args) => <FlureeButton {...args}>Button</FlureeButton>;
+const Template = (args) => <Button {...args}>Button</Button>;
 
-export const Blue = Template.bind({});
-Blue.args = {};
+export const SmallButton = Template.bind({});
+SmallButton.args = {
+  size: "sm",
+  color: "blue",
+};
 
-export const Twilight = Template.bind({});
-Twilight.args = {
+export const MediumButton = Template.bind({});
+MediumButton.args = {
+  size: "md",
+};
+
+export const LargeButton = Template.bind({});
+LargeButton.args = {
+  size: "lg",
+};
+
+export const XLargeButton = Template.bind({});
+XLargeButton.args = {
+  size: "xl",
+};
+
+export const BlueFilled = Template.bind({});
+BlueFilled.args = {};
+
+export const TwilightFilled = Template.bind({});
+TwilightFilled.args = {
   color: "twilight",
 };
 
-export const Flurple = Template.bind({});
-Flurple.args = {
+export const FlurpleFilled = Template.bind({});
+FlurpleFilled.args = {
   color: "flurple",
 };
 

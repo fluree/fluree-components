@@ -1,25 +1,22 @@
 import React from "react";
-import Button from "@material-ui/core/Button";
+import ButtonBase from "@material-ui/core/ButtonBase";
 import { makeStyles } from "@material-ui/core/styles";
 import clsx from "clsx";
 require("typeface-cooper-hewitt");
 
-const useStyles = makeStyles((theme) => ({
+const useStyles = makeStyles(() => ({
   root: {
-    minHeight: "36px",
     borderRadius: "3px",
     boxSizing: "border-box",
     borderWidth: "2px",
     borderStyle: "solid",
-    label: {
-      fontFamily: "Cooper Hewitt",
-      fontStyle: "normal",
-      fontWeight: 500,
-      lineHeight: "16px",
-      textAlign: "center",
-      letterSpacing: "0.75px",
-      textTransform: "uppercase",
-    },
+    fontFamily: "Cooper Hewitt",
+    fontStyle: "normal",
+    fontWeight: 500,
+    lineHeight: "16px",
+    textAlign: "center",
+    letterSpacing: "0.75px",
+    textTransform: "uppercase",
   },
   blueFilled: {
     background: "#13C6FF",
@@ -78,31 +75,54 @@ const useStyles = makeStyles((theme) => ({
   shadow: {
     boxShadow: "1px 1px 4px rgba(0, 0, 0, 0.25)",
   },
+  sizeSmall: {
+    fontSize: "0.75rem",
+    padding: "2px 0.75%",
+  },
+  sizeMedium: {
+    padding: "8px 1.5%",
+  },
+  sizeLarge: {
+    fontSize: "1.25rem",
+    padding: "14px 1.75%",
+  },
+  sizeXLarge: {
+    fontSize: "1.5rem",
+    padding: "20px 2%",
+  },
 }));
 
-const FlureeButton = (props) => {
+const Button = (props) => {
   const classes = useStyles();
 
-  const { color = "blue", type = "filled", dropShadow = false } = props;
+  const {
+    color = "blue",
+    type = "filled",
+    dropShadow = false,
+    size = "md",
+  } = props;
   return (
-    <Button
+    <ButtonBase
       className={clsx(
         classes.root,
+        size === "sm" && classes.sizeSmall,
+        size === "md" && classes.sizeMedium,
+        size === "lg" && classes.sizeLarge,
+        size === "xl" && classes.sizeXLarge,
         dropShadow && classes.shadow,
         (color === "blue" && type === "filled" && classes.blueFilled) ||
           (type === "outline" && classes.blueOutline),
         color === "twilight" &&
           ((type === "filled" && classes.twilightFilled) ||
             (type === "outline" && classes.twilightOutline)),
-        color === "flurple" && ((type === "filled" && classes.flurpleFilled) ||
-          (type === "outline" && classes.flurpleOutline))
+        color === "flurple" &&
+          ((type === "filled" && classes.flurpleFilled) ||
+            (type === "outline" && classes.flurpleOutline))
       )}
-      {...props}
-      disableElevation
     >
       {props.children}
-    </Button>
+    </ButtonBase>
   );
 };
 
-export default FlureeButton;
+export default Button;
