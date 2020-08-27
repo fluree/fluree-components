@@ -1,78 +1,117 @@
 import React from "react";
-import Button from "../components/Button";
+import { Button } from "@material-ui/core/";
+import { FlureeBasic } from "../themes";
 
 export default {
   title: "Example/Button",
   component: Button,
 };
 
-const Template = (args) => <Button {...args}>Button</Button>;
+const Template = (args) => (
+  <FlureeBasic>
+    <Button {...args}>Button</Button>
+  </FlureeBasic>
+);
 
 export const SmallButton = Template.bind({});
 SmallButton.args = {
-  size: "sm",
-  color: "blue",
+  size: "small",
+  variant: "contained",
 };
 
 export const MediumButton = Template.bind({});
 MediumButton.args = {
-  size: "md",
+  size: "medium",
+  variant: "contained",
 };
 
 export const LargeButton = Template.bind({});
 LargeButton.args = {
-  size: "lg",
+  size: "large",
+  variant: "contained",
 };
 
-export const XLargeButton = Template.bind({});
-XLargeButton.args = {
-  size: "xl",
+// export const XLargeButton = Template.bind({});
+// XLargeButton.args = {
+//   size: "xl",
+// };
+
+export const Text = Template.bind({});
+Text.args = {
+  variant: "text",
+};
+
+export const PrimaryText = Template.bind({});
+PrimaryText.args = {
+  variant: "text",
+  color: "primary",
+};
+
+export const SecondaryText = Template.bind({});
+SecondaryText.args = {
+  variant: "text",
+  color: "secondary",
 };
 
 export const BlueFilled = Template.bind({});
-BlueFilled.args = {};
+BlueFilled.args = {
+  variant: "contained",
+  color: "primary",
+  disableElevation: true,
+  size: "medium",
+};
 
 export const TwilightFilled = Template.bind({});
 TwilightFilled.args = {
-  color: "twilight",
+  variant: "contained",
+  disableElevation: true,
+  size: "medium",
 };
 
 export const FlurpleFilled = Template.bind({});
 FlurpleFilled.args = {
-  color: "flurple",
+  color: "secondary",
+  variant: "contained",
+  disableElevation: true,
+  size: "medium",
 };
 
 export const BlueShadow = Template.bind({});
 BlueShadow.args = {
-  dropShadow: true,
+  color: "primary",
+  variant: "contained",
+  size: "medium",
 };
 
 export const TwilightShadow = Template.bind({});
 TwilightShadow.args = {
-  dropShadow: true,
-  color: "twilight",
+  variant: "contained",
+  size: "medium",
 };
 
 export const FlurpleShadow = Template.bind({});
 FlurpleShadow.args = {
-  dropShadow: true,
-  color: "flurple",
+  variant: "contained",
+  color: "secondary",
+  size: "medium",
 };
 
 export const BlueOutline = Template.bind({});
 BlueOutline.args = {
-  color: "blue",
-  type: "outline",
+  color: "primary",
+  variant: "outlined",
+  size: "medium",
 };
 
 export const TwilightOutline = Template.bind({});
 TwilightOutline.args = {
-  color: "twilight",
-  type: "outline",
+  variant: "outlined",
+  size: "medium",
 };
 
 export const FlurpleOutline = Template.bind({});
 FlurpleOutline.args = {
-  color: "flurple",
-  type: "outline",
+  color: "secondary",
+  variant: "outlined",
+  size: "medium",
 };
