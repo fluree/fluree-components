@@ -2,8 +2,8 @@
   "name": "fluree-components",
   "version": "0.1.0",
   "private": true,
+  "main": "index.js",
   "dependencies": {
-    "@material-ui/core": "^4.11.0",
     "@testing-library/jest-dom": "^4.2.4",
     "@testing-library/react": "^9.5.0",
     "@testing-library/user-event": "^7.2.1",
@@ -42,6 +42,7 @@
   },
   "devDependencies": {
     "@babel/core": "^7.11.4",
+    "@material-ui/core": "^4.11.0",
     "@storybook/addon-actions": "^6.0.16",
     "@storybook/addon-controls": "^6.0.16",
     "@storybook/addon-essentials": "^6.0.16",
@@ -51,5 +52,8 @@
     "@storybook/react": "^6.0.16",
     "babel-loader": "^8.1.0",
     "react-is": "^16.13.1"
+  },
+  "peerDependencies": {
+    "@material-ui/core": "4.11.0"
   }
 }
