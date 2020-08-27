@@ -54,8 +54,8 @@ export default {
         defaultValue: { summary: "false" },
       },
       control: {
-        type: "boolean"
-      }
+        type: "boolean",
+      },
     },
     disabled: {
       description: "Disables the button",
@@ -68,9 +68,10 @@ export default {
         },
       },
       control: {
-        type: "boolean"
-      }
+        type: "boolean",
+      },
     },
+    onClick: { action: "*click*" },
   },
 };
 
@@ -81,8 +82,7 @@ const Template = (args) => (
 );
 
 export const DefaultButton = Template.bind({});
-DefaultButton.args = {
-};
+DefaultButton.args = {};
 DefaultButton.parameters = {
   docs: {
     source: {
