@@ -10,7 +10,7 @@ import {
   darkGrey,
   lightGrey,
   blizzard,
-  white
+  white,
 } from "./colors";
 import buttonGroup from "./overrides/buttonGroup";
 import button from "./overrides/button";
@@ -44,6 +44,7 @@ const flureeBasic = createMuiTheme({
       hint: lightGrey,
     },
     divider: blizzard,
+    action: { disabled: lightGrey },
   },
   shape: {
     borderRadius: "2px",

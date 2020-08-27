@@ -1,4 +1,11 @@
-import { flureeBlue, flurple, twilight, white } from "../colors";
+import {
+  flureeBlue,
+  flurple,
+  twilight,
+  white,
+  lightGrey,
+  transparent,
+} from "../colors";
 
 const contained = (color) => ({
   backgroundColor: color,
@@ -7,6 +14,9 @@ const contained = (color) => ({
   "&:hover": {
     backgroundColor: white,
     color: color,
+  },
+  "&$disabled": {
+    borderColor: transparent,
   },
 });
 
@@ -19,12 +29,16 @@ const outlined = (color) => ({
     color: white,
     borderWidth: "2px",
   },
+  "&$disabled": {
+    borderWidth: "2px",
+    borderColor: lightGrey
+  },
 });
 
 const button = {
   root: {
     fontSize: "1rem",
-    padding: "8px 15px"
+    padding: "8px 15px",
   },
   text: {
     color: twilight,
@@ -48,6 +62,9 @@ const button = {
   sizeLarge: {
     padding: "14px 20px",
     fontSize: "1.25rem",
+  },
+  disabled: {
+    borderColor: lightGrey,
   },
 };
 
