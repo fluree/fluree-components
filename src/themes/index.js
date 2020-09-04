@@ -4,20 +4,25 @@ import {
   flureeBlue,
   flurple,
   twilight,
-  ember,
-  teal,
-  violet,
+  alert,
+  warning,
+  positive,
   darkGrey,
   lightGrey,
   blizzard,
   white,
+  defaultBackground,
 } from "./colors";
 import buttonGroup from "./overrides/buttonGroup";
-import button from "./overrides/button";
+import button from "../stories/Inputs/button";
+import filledInput from "./overrides/filledInput";
 require("typeface-cooper-hewitt");
 
-const flureeBasic = createMuiTheme({
+const flureeBasic = {
   palette: {
+    background: {
+      default: defaultBackground,
+    },
     primary: {
       main: flureeBlue,
       contrastText: white,
@@ -29,16 +34,16 @@ const flureeBasic = createMuiTheme({
       main: twilight,
     },
     error: {
-      main: ember,
+      main: alert,
     },
     success: {
-      main: teal,
+      main: positive,
     },
     warning: {
-      main: violet,
+      main: warning,
     },
     text: {
-      primary: flurple,
+      primary: twilight,
       secondary: twilight,
       disabled: darkGrey,
       hint: lightGrey,
@@ -60,9 +65,38 @@ const flureeBasic = createMuiTheme({
   overrides: {
     MuiButtonGroup: { ...buttonGroup },
     MuiButton: { ...button },
+    MuiInputBase: {
+      input: {
+        fontFamily: "Open Sans",
+        fontSize: "0.875rem",
+        lineHeight: "24px",
+      },
+    },
+    MuiInputLabel: {
+      root: {
+        fontFamily: "Open Sans",
+        fontSize: "0.875rem",
+      },
+      focused: {
+        lineHeight: "12px",
+      },
+    },
+    MuiFormHelperText: {
+      root: {
+        fontFamily: "Open Sans",
+        lineHeight: "12px",
+        color: darkGrey,
+        "&$error": {
+          
+        },
+      },
+    },
+    MuiFilledInput: filledInput,
   },
-});
+};
+
+const theme = createMuiTheme(flureeBasic);
 
 export const FlureeBasic = (props) => {
-  return <ThemeProvider theme={flureeBasic}>{props.children}</ThemeProvider>;
+  return <ThemeProvider theme={theme}>{props.children}</ThemeProvider>;
 };

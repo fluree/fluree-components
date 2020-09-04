@@ -5,7 +5,7 @@ import {
   white,
   lightGrey,
   transparent,
-} from "../colors";
+} from "../../themes/colors";
 
 const contained = (color) => ({
   backgroundColor: color,
@@ -31,7 +31,7 @@ const outlined = (color) => ({
   },
   "&$disabled": {
     borderWidth: "2px",
-    borderColor: lightGrey
+    borderColor: lightGrey,
   },
 });
 

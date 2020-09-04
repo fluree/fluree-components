@@ -71,7 +71,7 @@ export default {
         type: "boolean",
       },
     },
-    onClick: { action: "*click*" },
+    onClick: { action: "*click*", description: null },
   },
 };
 

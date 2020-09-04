@@ -9,3 +9,9 @@ export const lightGrey = "#979797";
 export const blizzard = "#C6D4FF";
 export const white = "#FFFFFF";
 export const transparent = "rgba(0, 0, 0, 0)";
+
+export const alert = "#FF0000";
+export const warning = "#FFD037";
+export const positive = "#4CB963";
+export const textFieldBack = "#F4F4F4";
+export const defaultBackground = "#CEF1FF";
