@@ -10,7 +10,7 @@ import ShareIcon from "@material-ui/icons/Share";
 import { FlureeBasic } from "../../../themes";
 
 export default {
-  title: "Example/Cards",
+  title: "Surfaces/Cards",
   component: Card,
 };
 

@@ -3,7 +3,7 @@ import Switch from "@material-ui/core/Switch";
 import {FlureeBasic} from "../../themes";
 
 export default {
-  title: "Example/Inputs/Switch",
+  title: "Inputs/Switch",
   component: Switch
 }
 

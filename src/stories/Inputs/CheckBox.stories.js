@@ -3,7 +3,7 @@ import { Checkbox } from "@material-ui/core";
 import { FlureeBasic } from "../../themes";
 
 export default {
-  title: "Example/Inputs/Checkbox",
+  title: "Inputs/Checkbox",
   component: Checkbox,
 };
 

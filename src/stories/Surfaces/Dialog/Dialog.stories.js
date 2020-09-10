@@ -8,7 +8,7 @@ import DialogActions from "@material-ui/core/DialogActions";
 import { FlureeBasic } from "../../../themes";
 
 export default {
-  title: "Example/Dialog Boxes",
+  title: "Surfaces/Dialog Boxes",
   component: Dialog,
 };
 

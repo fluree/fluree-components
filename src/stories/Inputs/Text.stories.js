@@ -4,7 +4,7 @@ import { FlureeBasic } from "../../themes";
 
 
 export default {
-  title: "Example/Inputs/Text",
+  title: "Inputs/Text/TextField",
   component: TextField,
 };
 

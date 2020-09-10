@@ -4,7 +4,7 @@ import ButtonGroup from "@material-ui/core/ButtonGroup";
 import { FlureeBasic } from "../../themes";
 
 export default {
-  title: "Example/ButtonGroup",
+  title: "Inputs/ButtonGroup",
   component: ButtonGroup,
   subcomponents: { Button },
 };

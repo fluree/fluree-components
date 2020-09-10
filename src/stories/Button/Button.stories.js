@@ -3,7 +3,7 @@ import { Button } from "@material-ui/core/";
 import { FlureeBasic } from "../../themes";
 
 export default {
-  title: "Example/Button",
+  title: "Inputs/Button",
   component: Button,
   argTypes: {
     size: {

@@ -3,7 +3,7 @@ import { Radio } from "@material-ui/core";
 import { FlureeBasic } from "../../themes";
 
 export default {
-  title: "Example/Inputs/Radio",
+  title: "Inputs/Radio",
   component: Radio,
 };
 
