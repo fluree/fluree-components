@@ -1,6 +1,5 @@
 import React from "react";
 import { Button } from "@material-ui/core/";
-import { FlureeBasic } from "../../themes";
 
 export default {
   title: "Inputs/Button",
@@ -75,11 +74,7 @@ export default {
   },
 };
 
-const Template = (args) => (
-  <FlureeBasic>
-    <Button {...args}>Button</Button>
-  </FlureeBasic>
-);
+const Template = (args) => <Button {...args}>Button</Button>;
 
 export const DefaultButton = Template.bind({});
 DefaultButton.args = {};

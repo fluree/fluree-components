@@ -5,7 +5,6 @@ import DialogTitle from "@material-ui/core/DialogTitle";
 import DialogContent from "@material-ui/core/DialogContent";
 import DialogContentText from "@material-ui/core/DialogContentText";
 import DialogActions from "@material-ui/core/DialogActions";
-import { FlureeBasic } from "../../../themes";
 
 export default {
   title: "Surfaces/Dialog Boxes",
@@ -24,7 +23,7 @@ const Template = (args) => {
   };
 
   return (
-    <FlureeBasic>
+    <>
       <Button type="outlined" color="primary" onClick={handleClickOpen}>
         Open Dialog
       </Button>
@@ -54,7 +53,7 @@ const Template = (args) => {
           </div>
         </DialogActions>
       </Dialog>
-    </FlureeBasic>
+    </>
   );
 };
 
@@ -68,14 +67,14 @@ StandardDialog.args = {
     justifyContent: "space-between",
   },
   button1: "Decline",
-  button2: "Accept"
+  button2: "Accept",
 };
 
 export const DialogNoTitle = Template.bind({});
 DialogNoTitle.args = {
   content: "Discard draft?",
   button1: "Cancel",
-  button2: "Discard"
+  button2: "Discard",
 };
 
 export const AreYouSure = Template.bind({});
@@ -83,5 +82,5 @@ AreYouSure.args = {
   title: "Are you sure?",
   content: "You'll lose all photos and media!",
   button1: "Cancel",
-  button2: "Delete"
-}
+  button2: "Delete",
+};

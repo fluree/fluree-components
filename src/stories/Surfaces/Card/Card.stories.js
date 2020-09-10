@@ -7,7 +7,6 @@ import FavoriteIcon from "@material-ui/icons/Favorite";
 import BookmarkIcon from "@material-ui/icons/Bookmark";
 import IconButton from "@material-ui/core/IconButton";
 import ShareIcon from "@material-ui/icons/Share";
-import { FlureeBasic } from "../../../themes";
 
 export default {
   title: "Surfaces/Cards",
@@ -15,19 +14,19 @@ export default {
 };
 
 const Template = (args) => (
-  <FlureeBasic>
-    <Card {...args.card} maxWidth="400px">
-      {args.cardHeader && <CardHeader {...args.cardHeader.props} />}
-      {args.cardContent && (
-        <CardContent {...args.cardContent.props}>{args.cardContent.content}</CardContent>
-      )}
-      {args.cardActions && (
-        <CardActions {...args.cardActions.props}>
-          {args.cardActions.children}
-        </CardActions>
-      )}
-    </Card>
-  </FlureeBasic>
+  <Card {...args.card} maxWidth="400px">
+    {args.cardHeader && <CardHeader {...args.cardHeader.props} />}
+    {args.cardContent && (
+      <CardContent {...args.cardContent.props}>
+        {args.cardContent.content}
+      </CardContent>
+    )}
+    {args.cardActions && (
+      <CardActions {...args.cardActions.props}>
+        {args.cardActions.children}
+      </CardActions>
+    )}
+  </Card>
 );
 
 export const EmptyCard = Template.bind({});

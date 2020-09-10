@@ -6,8 +6,6 @@ import FormHelperText from "@material-ui/core/FormHelperText";
 import { makeStyles } from "@material-ui/core/styles";
 import { alert } from "../../../themes/colors";
 
-import { FlureeBasic } from "../../../themes";
-
 export default {
   title: "Inputs/Text/Custom/Limited Characters",
 };
@@ -51,29 +49,27 @@ const Template = (args) => {
   const changeHandler = (e) => setValue(e.target.value);
 
   return (
-    <FlureeBasic>
-      <FormControl variant="filled" error={value.length > args.maxLength}>
-        <InputLabel htmlFor="example-input" variant="filled">
-          {args.label}
-        </InputLabel>
-        <FilledInput
-          id="example-input"
-          aria-describedby="example-helper-text"
-          onChange={changeHandler}
-          value={value}
-          multiline={args.multiline}
-        />
-        <FormHelperText
-          id="example-helper-text"
-          variant="filled"
-          component={CharLimitHelper}
-          length={value.length}
-          maxLength={args.maxLength}
-        >
-          {args.helperText}
-        </FormHelperText>
-      </FormControl>
-    </FlureeBasic>
+    <FormControl variant="filled" error={value.length > args.maxLength}>
+      <InputLabel htmlFor="example-input" variant="filled">
+        {args.label}
+      </InputLabel>
+      <FilledInput
+        id="example-input"
+        aria-describedby="example-helper-text"
+        onChange={changeHandler}
+        value={value}
+        multiline={args.multiline}
+      />
+      <FormHelperText
+        id="example-helper-text"
+        variant="filled"
+        component={CharLimitHelper}
+        length={value.length}
+        maxLength={args.maxLength}
+      >
+        {args.helperText}
+      </FormHelperText>
+    </FormControl>
   );
 };
 

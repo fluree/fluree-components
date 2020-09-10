@@ -1,6 +1,5 @@
 import React from "react";
 import Switch from "@material-ui/core/Switch";
-import {FlureeBasic} from "../../themes";
 
 export default {
   title: "Inputs/Switch",
@@ -8,9 +7,7 @@ export default {
 }
 
 const Template = args => (
-  <FlureeBasic>
     <Switch {...args} />
-  </FlureeBasic>
 )
 
 export const DefaultSwitch = Template.bind({});

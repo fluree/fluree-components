@@ -166,3 +166,5 @@ const theme = createMuiTheme(flureeBasic);
 export const FlureeBasic = (props) => {
   return <ThemeProvider theme={theme}>{props.children}</ThemeProvider>;
 };
+
+export default theme
