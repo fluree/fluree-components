@@ -15,7 +15,7 @@ import {
   fieldBackground,
 } from "./colors";
 import buttonGroup from "./overrides/buttonGroup";
-import button from "../stories/Inputs/button";
+import button from "./overrides/button";
 import filledInput from "./overrides/filledInput";
 require("typeface-cooper-hewitt");
 
@@ -31,6 +31,7 @@ const flureeBasic = {
     },
     secondary: {
       main: flurple,
+      contrastText: white,
     },
     info: {
       main: twilight,
@@ -58,11 +59,6 @@ const flureeBasic = {
   },
   typography: {
     fontFamily: "'Cooper Hewitt', 'Open Sans', 'Roboto Condensed'",
-    button: {
-      fontSize: "1rem",
-      lineHeight: "16px",
-      letterSpacing: "0.75px",
-    },
     h6: {
       fontWeight: "bold",
       letterSpacing: "0.0015em",
@@ -167,4 +163,4 @@ export const FlureeBasic = (props) => {
   return <ThemeProvider theme={theme}>{props.children}</ThemeProvider>;
 };
 
-export default theme
+export default theme;
