@@ -57,7 +57,7 @@ const button = {
   outlinedSecondary: outlined(flurple),
   sizeSmall: {
     padding: "2px 10px",
-    fontSize: "0.75rem",
+    fontSize: "0.875rem",
   },
   sizeLarge: {
     padding: "14px 20px",

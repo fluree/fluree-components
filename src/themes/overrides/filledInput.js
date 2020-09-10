@@ -4,7 +4,8 @@ import {
   textFieldBack,
   darkGrey,
   twilight,
-  alert
+  alert,
+  fieldBackground
 } from "../colors";
 
 const filledInput = {
@@ -13,15 +14,25 @@ const filledInput = {
     caretColor: flureeBlue,
     color: darkGrey,
     "&$focused": {
-      color: twilight
+      color: twilight,
+      backgroundColor: fieldBackground
     },
     "&$error": {
       caretColor: alert
+    },
+    "&$disabled": {
+      color: "rgba(0, 0, 0, 0.54)",
+      backgroundColor: textFieldBack,
     }
   },
   colorSecondary: {
     caretColor: flurple,
   },
+  underline: {
+    "&$disabled:before": {
+      borderBottomStyle: "solid",
+    }
+  }
 };
 
 export default filledInput;

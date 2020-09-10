@@ -63,3 +63,17 @@ OutlinedText.parameters = {
     },
   },
 };
+
+export const DisabledText = Template.bind({});
+DisabledText.args = {
+  disabled: true,
+  variant: "filled",
+  label: "Disabled text"
+}
+
+export const MultiLineText = Template.bind({});
+MultiLineText.args = {
+  variant: "filled",
+  label: "Singe-line label",
+  multiline: true
+}
