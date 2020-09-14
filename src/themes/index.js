@@ -17,6 +17,7 @@ import {
 import buttonGroup from "./overrides/buttonGroup";
 import button from "./overrides/button";
 import filledInput from "./overrides/filledInput";
+import { typography } from "./typography";
 require("typeface-cooper-hewitt");
 
 const flureeBasic = {
@@ -57,13 +58,7 @@ const flureeBasic = {
   shape: {
     borderRadius: "2px",
   },
-  typography: {
-    fontFamily: "'Cooper Hewitt', 'Open Sans', 'Roboto Condensed'",
-    h6: {
-      fontWeight: "bold",
-      letterSpacing: "0.0015em",
-    },
-  },
+  typography: { ...typography },
   overrides: {
     MuiButtonGroup: { ...buttonGroup },
     MuiButton: { ...button },
@@ -145,13 +140,16 @@ const flureeBasic = {
         bottom: "20px",
         alignItem: "flex-end",
       },
+      subheader: {
+        color: white
+      },
       content: {
         justifyContent: "flex-end",
       },
     },
     MuiCardActions: {
       root: {
-        justifyContent: "flex-end",
+        // justifyContent: "flex-end",
       },
     },
   },
