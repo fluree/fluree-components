@@ -1,16 +1,13 @@
 import React from "react";
 import { Checkbox } from "@material-ui/core";
-import { FlureeBasic } from "../../themes";
 
 export default {
-  title: "Example/Inputs/Checkbox",
+  title: "Inputs/Checkbox",
   component: Checkbox,
 };
 
 const Template = (args) => (
-  <FlureeBasic>
     <Checkbox {...args} />
-  </FlureeBasic>
 );
 
 export const DefaultCheckbox = Template.bind({});

@@ -1,17 +1,14 @@
 import React from "react";
 import TextField from "@material-ui/core/TextField";
-import { FlureeBasic } from "../../themes";
 
 
 export default {
-  title: "Example/Inputs/Text",
+  title: "Inputs/TextField",
   component: TextField,
 };
 
 const Template = (args) => (
-  <FlureeBasic>
     <TextField {...args} />
-  </FlureeBasic>
 );
 
 export const StandardText = Template.bind({});
@@ -37,7 +34,7 @@ TextWithHelper.args = {
 TextWithHelper.parameters = {
   docs: {
     source: {
-      code: '<Textfield label="Filled" variant="filled" />',
+      code: '<Textfield label="Floating label" variant="filled" value="Input text" helperText="Helper Text" />',
     },
   },
 };
@@ -63,3 +60,17 @@ OutlinedText.parameters = {
     },
   },
 };
+
+export const DisabledText = Template.bind({});
+DisabledText.args = {
+  disabled: true,
+  variant: "filled",
+  label: "Disabled text"
+}
+
+export const MultiLineText = Template.bind({});
+MultiLineText.args = {
+  variant: "filled",
+  label: "Multi-line label",
+  multiline: true
+}

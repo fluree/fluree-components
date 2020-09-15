@@ -1,22 +1,19 @@
 import React from "react";
 import Button from "@material-ui/core/Button";
 import ButtonGroup from "@material-ui/core/ButtonGroup";
-import { FlureeBasic } from "../../themes";
 
 export default {
-  title: "Example/ButtonGroup",
+  title: "Inputs/ButtonGroup",
   component: ButtonGroup,
   subcomponents: { Button },
 };
 
 const Template = (args) => (
-  <FlureeBasic>
-    <ButtonGroup {...args}>
-      <Button>one</Button>
-      <Button>two</Button>
-      <Button>three</Button>
-    </ButtonGroup>
-  </FlureeBasic>
+  <ButtonGroup {...args}>
+    <Button>one</Button>
+    <Button>two</Button>
+    <Button>three</Button>
+  </ButtonGroup>
 );
 
 export const ContainedGroup = Template.bind({});

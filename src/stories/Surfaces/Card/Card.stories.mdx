@@ -1,0 +1,153 @@
+import { Meta, Story, Source, Canvas } from "@storybook/addon-docs/blocks";
+import Button from "@material-ui/core/Button";
+import Card from "@material-ui/core/Card";
+import CardHeader from "@material-ui/core/CardHeader";
+import CardContent from "@material-ui/core/CardContent";
+import CardActions from "@material-ui/core/CardActions";
+import CardMedia from "@material-ui/core/CardMedia";
+import FavoriteIcon from "@material-ui/icons/Favorite";
+import BookmarkIcon from "@material-ui/icons/Bookmark";
+import IconButton from "@material-ui/core/IconButton";
+import ShareIcon from "@material-ui/icons/Share";
+import Typography from "@material-ui/core/Typography";
+import Grid from "@material-ui/core/Grid";
+
+<Meta title="Surfaces/Card" />
+
+<Canvas>
+  <Story name="Empty">
+    <Card style={{ width: "300px", height: "200px" }}></Card>
+  </Story>
+  
+</Canvas>
+
+<Canvas>
+  <Story name="Header">
+    <Card>
+      <CardHeader title="Pre-fab Homes" subheader="For the rich" />
+      <CardActions style={{ justifyContent: "flex-end" }}>
+        <IconButton>
+          <FavoriteIcon />
+        </IconButton>
+        <IconButton>
+          <BookmarkIcon color="primary" />
+        </IconButton>
+        <IconButton>
+          <ShareIcon />
+        </IconButton>
+      </CardActions>
+    </Card>
+  </Story>
+</Canvas>
+
+<Canvas>
+  <Story name="Vertical with Buttons and Header">
+    <Card>
+      <CardHeader title="Card title" style={{ height: "175px" }} />
+      <CardContent>
+        <Typography variant="body2" component="p">
+          It is a long established fact that a reader will be distracted by the
+          readeable content of a page...
+        </Typography>
+      </CardContent>
+      <CardActions
+        style={{ borderTop: "1px solid lightgrey", padding: "15px 2%" }}
+      >
+        <Button color="secondary" size="small">
+          Action 1
+        </Button>
+        <Button color="secondary" size="small">
+          Action 2
+        </Button>
+      </CardActions>
+    </Card>
+  </Story>
+</Canvas>
+
+<Canvas>
+  <Story name="Title with action buttons">
+    <Grid container spacing={1}>
+      <Grid item>
+        <Card style={{ maxWidth: "168px" }}>
+          <CardHeader title="Card title" style={{ height: "168px" }} />
+          <CardActions style={{ justifyContent: "center" }}>
+            <IconButton>
+              <FavoriteIcon />
+            </IconButton>
+            <IconButton>
+              <BookmarkIcon />
+            </IconButton>
+            <IconButton>
+              <ShareIcon />
+            </IconButton>
+          </CardActions>
+        </Card>
+      </Grid>
+      <Grid item>
+        <Card style={{ maxWidth: "168px" }}>
+          <CardHeader title="Best Airlines" style={{ height: "168px" }} />
+          <CardActions style={{ justifyContent: "center" }}>
+            <IconButton>
+              <FavoriteIcon />
+            </IconButton>
+            <IconButton>
+              <BookmarkIcon />
+            </IconButton>
+            <IconButton>
+              <ShareIcon />
+            </IconButton>
+          </CardActions>
+        </Card>
+      </Grid>
+    </Grid>
+  </Story>
+</Canvas>
+
+<Canvas>
+  <Story name="Header box to left">
+    <Card style={{ display: "flex" }}>
+      <CardMedia
+        style={{ backgroundColor: "#13C6FF", width: "88px", height: "136px" }}
+      ></CardMedia>
+      <div style={{ width: "100%" }}>
+        <CardContent>
+          <Typography variant="h5">Card Title</Typography>
+          <Typography variant="caption">Subtitle</Typography>
+        </CardContent>
+        <CardActions
+          style={{ borderTop: "1px solid lightgrey", padding: "15px 1%" }}
+        >
+          <Button color="secondary" size="small">
+            Action 1
+          </Button>
+          <Button color="secondary" size="small">
+            Action 2
+          </Button>
+        </CardActions>
+      </div>
+    </Card>
+  </Story>
+</Canvas>
+
+<Canvas>
+  <Story name="No Header">
+    <Card>
+      <CardContent>
+        <Typography variant="h5">Question title</Typography>
+        <Typography variant="body2">
+          Ask a simple question to engage with the user
+        </Typography>
+      </CardContent>
+      <CardActions
+        style={{ padding: "15px 1%", borderTop: "1px solid lightgrey" }}
+      >
+        <Button color="secondary" size="small">
+          No
+        </Button>
+        <Button color="secondary" size="small">
+          Yes
+        </Button>
+      </CardActions>
+    </Card>
+  </Story>
+</Canvas>

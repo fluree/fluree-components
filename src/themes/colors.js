@@ -15,3 +15,4 @@ export const warning = "#FFD037";
 export const positive = "#4CB963";
 export const textFieldBack = "#F4F4F4";
 export const defaultBackground = "#CEF1FF";
+export const fieldBackground = "#F3F3F3";

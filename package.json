@@ -21,7 +21,7 @@
     "eject": "react-scripts eject",
     "storybook": "start-storybook -p 6006 -s public",
     "build-storybook": "build-storybook -s public",
-    "push-to-aws": "aws s3 sync storybook-static/ s3://fluree-components --cache-control 3600",
+    "push-to-aws": "aws s3 sync storybook-static/ s3://fluree-components --profile fluree --cache-control 3600",
     "deploy": "npm run build-storybook && npm run push-to-aws"
   },
   "eslintConfig": {

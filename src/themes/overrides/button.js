@@ -10,6 +10,7 @@ import {
 const contained = (color) => ({
   backgroundColor: color,
   border: `2px solid ${color}`,
+  fontSize: "1rem",
   color: white,
   "&:hover": {
     backgroundColor: white,
@@ -23,6 +24,7 @@ const contained = (color) => ({
 const outlined = (color) => ({
   border: `2px solid ${color}`,
   padding: "8px 15px",
+  fontSize: "1rem",
   color: color,
   "&:hover": {
     backgroundColor: color,
@@ -39,9 +41,10 @@ const button = {
   root: {
     fontSize: "1rem",
     padding: "8px 15px",
+    lineHeight: "16px"
   },
   text: {
-    color: twilight,
+    fontWeight: "bold",
   },
   textPrimary: {
     color: flureeBlue,
@@ -57,7 +60,7 @@ const button = {
   outlinedSecondary: outlined(flurple),
   sizeSmall: {
     padding: "2px 10px",
-    fontSize: "0.75rem",
+    fontSize: "0.875rem",
   },
   sizeLarge: {
     padding: "14px 20px",

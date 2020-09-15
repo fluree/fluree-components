@@ -1,16 +1,13 @@
 import React from "react";
 import { Radio } from "@material-ui/core";
-import { FlureeBasic } from "../../themes";
 
 export default {
-  title: "Example/Inputs/Radio",
+  title: "Inputs/Radio",
   component: Radio,
 };
 
 const Template = (args) => (
-  <FlureeBasic>
     <Radio {...args} />
-  </FlureeBasic>
 );
 
 export const DefaultRadio = Template.bind({});
