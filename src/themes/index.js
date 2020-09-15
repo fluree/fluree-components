@@ -141,24 +141,19 @@ const flureeBasic = {
         alignItem: "flex-end",
       },
       subheader: {
-        color: white
+        color: white,
       },
       content: {
         justifyContent: "flex-end",
       },
     },
-    MuiCardActions: {
-      root: {
-        // justifyContent: "flex-end",
-      },
-    },
   },
 };
 
-const theme = createMuiTheme(flureeBasic);
+const flureeTheme = createMuiTheme(flureeBasic);
 
 export const FlureeBasic = (props) => {
-  return <ThemeProvider theme={theme}>{props.children}</ThemeProvider>;
+  return <ThemeProvider theme={flureeTheme}>{props.children}</ThemeProvider>;
 };
 
-export default theme;
+export default flureeTheme;
