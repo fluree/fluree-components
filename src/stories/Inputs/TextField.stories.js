@@ -3,7 +3,7 @@ import TextField from "@material-ui/core/TextField";
 
 
 export default {
-  title: "Inputs/Text/TextField",
+  title: "Inputs/TextField",
   component: TextField,
 };
 
@@ -71,6 +71,6 @@ DisabledText.args = {
 export const MultiLineText = Template.bind({});
 MultiLineText.args = {
   variant: "filled",
-  label: "Singe-line label",
+  label: "Multi-line label",
   multiline: true
 }
