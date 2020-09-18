@@ -41,7 +41,10 @@ const button = {
   root: {
     fontSize: "1rem",
     padding: "8px 15px",
-    lineHeight: "16px"
+    lineHeight: "16px",
+    "&$disabled": {
+      borderColor: "#979797",
+    },
   },
   text: {
     fontWeight: "bold",
@@ -65,9 +68,6 @@ const button = {
   sizeLarge: {
     padding: "14px 20px",
     fontSize: "1.25rem",
-  },
-  disabled: {
-    borderColor: lightGrey,
   },
 };
 

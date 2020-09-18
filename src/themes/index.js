@@ -63,22 +63,25 @@ const flureeBasic = {
     MuiButtonGroup: { ...buttonGroup },
     MuiButton: { ...button },
     MuiInputBase: {
+      root: {
+        "&$focused": {
+          backgroundColor: "#F3F3F3",
+        },
+      },
       input: {
         fontFamily: "Open Sans",
         fontSize: "0.875rem",
         lineHeight: "24px",
       },
-      focused: {
-        backgroundColor: "#F3F3F3",
-      },
+      focused: {},
     },
     MuiInputLabel: {
       root: {
         fontFamily: "Open Sans",
         fontSize: "0.875rem",
-      },
-      focused: {
-        lineHeight: "12px",
+        "&$focused": {
+          lineHeight: "12px",
+        },
       },
     },
     MuiFormHelperText: {
@@ -91,19 +94,21 @@ const flureeBasic = {
     },
     MuiFilledInput: filledInput,
     MuiRadio: {
-      disabled: {
-        color: "#C1C1C1",
-      },
-      primaryColor: {
+      root: {
         "&$disabled": {
           color: "#C1C1C1",
         },
       },
-      secondaryColor: {
-        "&$disabled": {
-          color: "#C1C1C1",
-        },
-      },
+      // primaryColor: {
+      //   "&$disabled": {
+      //     color: "#C1C1C1",
+      //   },
+      // },
+      // secondaryColor: {
+      //   "&$disabled": {
+      //     color: "#C1C1C1",
+      //   },
+      // },
     },
     MuiDialogTitle: {
       root: {
