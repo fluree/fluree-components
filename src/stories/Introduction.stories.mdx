@@ -1,12 +1,12 @@
-import { Meta } from '@storybook/addon-docs/blocks';
-import Code from './assets/code-brackets.svg';
-import Colors from './assets/colors.svg';
-import Comments from './assets/comments.svg';
-import Direction from './assets/direction.svg';
-import Flow from './assets/flow.svg';
-import Plugin from './assets/plugin.svg';
-import Repo from './assets/repo.svg';
-import StackAlt from './assets/stackalt.svg';
+import { Meta } from "@storybook/addon-docs/blocks";
+import Code from "./assets/code-brackets.svg";
+import Colors from "./assets/colors.svg";
+import Comments from "./assets/comments.svg";
+import Direction from "./assets/direction.svg";
+import Flow from "./assets/flow.svg";
+import Plugin from "./assets/plugin.svg";
+import Repo from "./assets/repo.svg";
+import StackAlt from "./assets/stackalt.svg";
 
 <Meta title="Introduction" />
 
@@ -116,4 +116,25 @@ import StackAlt from './assets/stackalt.svg';
 
 # Welcome to the Fluree MUI Theme Storybook
 
-These components have been Fluree-fied, and can be implemented by wrapping your app in the `FlureeTheme` ThemeProvider, found in `src/themes`.
+This Storybook contains examples of Material-UI themes that have had a "Fluree-fied" theme applied to them. To use the Fluree theme override, install the theme object with
+
+>`npm i @fluree/mui-theme --save`
+
+and then import the object, and apply it using `createMuiTheme` & `ThemeProvider` from `@material-ui/core`.
+
+## Usage Example
+```js
+import themeObject from "@fluree/mui-theme";
+import { createMuiTheme, ThemeProvider } from "@material-ui/core";
+
+const App = () => {
+  const flureeTheme = createMuiTheme(themeObject);
+  return (
+    <div>
+      <ThemeProvider theme={flureeTheme}>
+        <RestOfApp />
+      </ThemeProvider>
+    </div>
+  );
+};
+```
