@@ -1,7 +1,6 @@
 {
   "name": "@fluree/mui-theme",
-  "version": "1.0.0",
-  "private": false,
+  "version": "1.0.1",
   "source": "src/index.js",
   "main": "dist/index.js",
   "exports": "./dist/index.modern.js",
