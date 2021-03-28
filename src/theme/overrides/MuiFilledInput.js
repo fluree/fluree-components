@@ -6,33 +6,31 @@ import {
   twilight,
   alert,
   fieldBackground
-} from "../colors";
+} from '../palette/colors';
 
-const filledInput = {
+export default {
   root: {
     backgroundColor: textFieldBack,
     caretColor: flureeBlue,
     color: darkGrey,
-    "&$focused": {
+    '&$focused': {
       color: twilight,
       backgroundColor: fieldBackground
     },
-    "&$error": {
+    '&$error': {
       caretColor: alert
     },
-    "&$disabled": {
-      color: "rgba(0, 0, 0, 0.54)",
-      backgroundColor: textFieldBack,
+    '&$disabled': {
+      color: 'rgba(0, 0, 0, 0.54)',
+      backgroundColor: textFieldBack
     }
   },
   colorSecondary: {
-    caretColor: flurple,
+    caretColor: flurple
   },
   underline: {
-    "&$disabled:before": {
-      borderBottomStyle: "solid",
+    '&$disabled:before': {
+      borderBottomStyle: 'solid'
     }
   }
 };
-
-export default filledInput;

@@ -1,15 +1,16 @@
 import React from "react";
 
 import CssBaseline from "@material-ui/core/CssBaseline";
-import { MuiThemeProvider } from "@material-ui/core/styles";
+import { MuiThemeProvider, createMuiTheme } from "@material-ui/core/styles";
 import { StylesProvider } from "@material-ui/styles";
+import myTheme from "../src/theme/index"
 
-import FlureeLight from "../src/themes";
+const flureeTheme = createMuiTheme(myTheme);
 
 const StylesDecorator = storyFn => (
   <StylesProvider injectFirst>
     <CssBaseline />
-      <MuiThemeProvider theme={FlureeLight}>
+      <MuiThemeProvider theme={flureeTheme}>
         {storyFn()}
       </MuiThemeProvider>
   </StylesProvider>

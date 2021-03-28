@@ -10,7 +10,7 @@ import SearchIcon from "@material-ui/icons/Search";
 import FavoriteIcon from "@material-ui/icons/Favorite";
 import AddIcon from "@material-ui/icons/Add";
 import MoreVertIcon from "@material-ui/icons/MoreVert";
-import { white } from "../../themes/colors";
+import { white } from "../../theme/palette/colors";
 
 export default {
   title: "Surfaces/App Bar",

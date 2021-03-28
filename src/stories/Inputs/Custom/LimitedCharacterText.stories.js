@@ -4,7 +4,7 @@ import InputLabel from "@material-ui/core/InputLabel";
 import FilledInput from "@material-ui/core/FilledInput";
 import FormHelperText from "@material-ui/core/FormHelperText";
 import { makeStyles } from "@material-ui/core/styles";
-import { alert } from "../../../themes/colors";
+import { alert } from "../../../theme/palette/colors";
 
 export default {
   title: "Inputs/Custom/Text/Limited Characters",
