@@ -1,6 +1,7 @@
 {
   "name": "@fluree/mui-theme",
-  "version": "1.0.2",
+  "version": "1.0.3",
+  "description": "MUI theme object for Fluree-fied app styling",
   "source": "src/index.js",
   "main": "dist/index.js",
   "exports": "./dist/index.modern.js",
